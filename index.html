@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>kaliuser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="3D cube" href="css/style2.css">
+
+
+
+    <style>
+        /*======================================
+//--//-->   ABOUT
+======================================*/
+        
+        .about-mf .box-shadow-full {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        .about-mf .about-img {
+            margin-bottom: 2rem;
+        }
+        
+        .about-mf .about-img img {
+            margin-left: 10px;
+        }
+        
+        .skill-mf .progress {
+            /* background-color: #cde1f8; */
+            margin: .5rem 0 1.2rem 0;
+            border-radius: 0;
+            height: .7rem;
+        }
+        
+        .skill-mf .progress .progress-bar {
+            height: .7rem;
+            background-color: #ffbd39;
+        }
+        /* Animation styles */
+        
+        #typing-animation {
+            position: relative;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(20, end) infinite;
+        }
+        
+        #typing-animation:before {
+            content: "";
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #ccc;
+            animation: typing-cursor 0.5s ease-in-out infinite;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes typing-cursor {
+            from {
+                width: 5px;
+            }
+            to {
+                width: 0;
+            }
+        }
+        /* project image zoom effect */
+        
+        .zoom-effect {
+            overflow: hidden;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .zoom-effect:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Atharva Bodade </a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                    <li class="nav-item"><a href="#project-section" class="nav-link"><span>Own Projects</span></a></li>
+                    <li class="nav-item"><a href="#Fablab-section" class="nav-link"><span>Fablab Projects</span></a></li>
+                    <li class="nav-item"><a href="#aws-section" class="nav-link"><span>AWS-Certification</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="home-section" class="hero">
+        <div class="home-slider  owl-carousel">
+            <div class="slider-item ">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img "  style="background-image:url(images/h.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Hello!</span>
+                                <h1 class="mb-4 mt-3">I'm <span>Atharva Bodade</span></h1>
+
+                                <!-- Element to contain animated typing -->
+                                <span id="typing-animation"></span>
+
+
+                                <script>
+                                    // Initialize the typing animation
+                                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                                    // Create an array of typing text
+                                    const typingTexts = [
+                                        'IT Engineering Student  ',
+                                        'Mobigrapher  ',
+                                        'Cloud   ',
+                                    ];
+
+
+                                    // Create a function to display the typing animation for a given text
+                                    function playTypingAnimation(text) {
+                                        // Loop through each character and add it to the element
+                                        for (let i = 0; i < text.length; i++) {
+                                            setTimeout(() => {
+                                                typingAnimationElement.textContent += text[i];
+                                            }, i * 200); // Increase the delay to slow down the typing animation
+                                        }
+
+                                        // Once the animation is complete, reset the text and start over
+                                        setTimeout(() => {
+                                            typingAnimationElement.textContent = '';
+                                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                                        }, text.length * 200);
+                                    }
+
+                                    // Start the typing animation loop
+                                    playTypingAnimation(typingTexts[0]);
+                                </script>
+
+                                <br>
+                                <br>
+                                <h2>Student of Information Technology Engineering</h2>
+                                <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                                <!-- <br> -->
+                                <p>
+                                    <a href="https://github.com/atharvapatil1210" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                    <!-- <div class="row d-flex"> -->
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img-about img d-flex align-items-stretch">
+                            <div class="overlay">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="" alt="">
+                                            <!-- Add image -->
+                                        </div>
+                                    </div>
+                                    <!-- Details next to profile image -->
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p class="title-s"></span> <span></p>
+										<p class="title-s"></span> <span></p>
+							
+										<p class="title-s"> </span> <span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<p>AWS Services</p>
+									
+									
+									
+									
+									<p>My SQL</p>
+									
+									<p>Serverless Computing in AWS , Azure</p> 
+									
+										
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								<p>With over around 10 months of SSGMCE journey of Amazing and Creative Experience in the field of Startup , Kali Linux and Small part of Ethical Hacking, Around 20 Tools of AWS services , Fundamentals of Microsoft Azure .
+									 </p>
+									
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Student of Information Technology &amp; Engineering</span></li>
+
+                                                <li class="d-flex"><span>Education  </span> <span>Bachelor of Engineering</span></li>
+                                                <li class="d-flex"><span>Language  </span> <span>English, Hindi , Marathi</span></li>
+                                                <li class="d-flex"><span>AWS Tools</span> <span>S3 Bucket , AWS Lamda , AWS Amplify  &amp; AWS Bedrock</span></li>
+                                                <li class="d-flex"><span>Kali Linux Tools </span> <span> Nstool , DNS , SetUpToolKit ,Metasploid  </li>
+									<li class="d-flex"><span>Other Skills  </span> <span>Python (PANDAS , NumPy), Terraform , Wordpress ,Meta Ollam,Microsoft AZURE STORAGE , Brute Force Attack , My SQL</span></li>
+                                                <li class="d-flex"><span>Interest  </span> <span>Build Own Startup, Traveling, Wildlife Photography</span></li>
+
+                                                </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="counter-wrap ftco-animate d-flex mt-md-3">
+
+
+                                        </p>
+                                        <p><a href="https://www.linkedin.com/in/atharvabodade12/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Resume</h1>
+                    <h2 class="mb-4">Resume</h2>
+                    <p>Hi! I'm Atharva , an Information Technology Engineering Student with a passion for Ethical hacking and a drive to contribute to my country's security Recently completed C programming in college . Python Fundamentals through PW skills
+                        Platform. Actively exploring Ethical Hacking for the past month. leaveraging Kali linux tools . Eager to delve into the fascinating world of Artificial intellegence and Computing Part . I am way on the DevOps and Cloud Computing Engineer 
+                        for this I have completed Terraform , AWS Tools , GCP , Microsoft Azure Fundamentals , Python and Linux 
+                         <div class=""></div>
+                    </p>
+                    <!--Add resume words there-->
+                </div>
+            </div>
+
+            <div class="row">
+                <h1 class="big-4">Experience</h1>
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2021</span>
+                        <h2>Social Media Marketing</h2>
+
+                        <p class="mt-4">
+                            <ul>
+
+                            </ul>
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <h1 class="big-4">Education</h1>
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2023-2027</span>
+                        <h2>Bachelor of Engineering</h2>
+                        <span class="position">Shri Sant Gajanan Maharaj College of Engineering</span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2021-2023</span>
+                        <h2>Shri R.L.T. College of Science , Akola</h2>
+                        <p class="mt-4">MHT-CET : 94.34%ile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 text-center ftco-animate">
+                    <p><a href="https://docs.google.com/document/d/130l7o2d3axFWoYEsXRn5KUD2JlPp66xm4NTKLNj_1QI" class="btn btn-primary py-4 px-5">Download CV</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-section" id="project-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Own</h1>
+                    <h2 class="mb-4">Own Projects</h2>
+                    <p>Below are the sample Project on AWS Cloud and Machine Learning and C Language</p>
+                </div>
+            </div>
+                        <div class="text mt-3  d-block" style="width: 100%; display: flex;" >
+
+                            <div class="div1"><h3 class="heading"><a href="https://kisanco-bwwr.glide.page">Build an Own Prototype Farmer Connection Platform Application with glidepage</a></h3>
+                                <h4>Build an Application for Farmers this app which can Connect Farmer to Company for Selling Agricultural products</h4></div>
+                                <h4>Description : </h4>
+                                <p>KisanCo is an innovative platform designed to empower farmers by facilitating direct connections with agricultural companies for selling their produce. Leveraging the power of artificial intelligence (AI), KisanCo streamlines the process of product listing, negotiation, and transaction, enabling farmers to achieve fair prices for their agricultural products while providing companies access to high-quality produce.</p>
+                                <p>According to prototype ,
+                                    Product Listing and Management: Farmers can easily list their agricultural products on the platform, providing details such as crop type, quantity, quality, and expected price.
+                                    Real-time Negotiation: The platform facilitates real-time negotiation between farmers and companies, allowing for fair price agreements and transparent communication.
+                                    Transaction Facilitation: Once a deal is reached, KisanCo assists in facilitating the transaction process, including payment processing and logistics coordination.</p>
+                                    <h5>Skills Required : AI knowledge</h5>
+                            <div class="div2"><h3 class="heading"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7157182024187797504/?originTrackingId=6gbv1k2bSCeUSidYmIKeeQ%3D%3D">Build an Own AWS Cloud</a></h3>
+                                <p>I create a self-hosted cloud to replace Dropbox and Google Drive, FileCloud is recommended for its security, remote access to files, data control, and enterprise-level data governance features. The demonstration begins with
+                                    launching a FileCloud instance on AWS, emphasizing the selection of T2 medium instance type for improved performance and the application of a license file for full authorization. using Amazon S3 for cost-effective storage,
+                                    noting its various storage tiers and cost advantages compared to increasing volume size on AWS. Instructions for configuring AWS S3 storage for FileCloud are detailed, including creating an IAM user with S3 access keys
+                                    and modifying the cloud config.php file to change the storage location to Amazon S3 for seamless integration.</p>
+                                    <h5 href="https://github.com/atharvapatil1210/own_cloud/blob/master/main.tf">Infrastructure as a code or Terraform</h5>
+                                    <h5>Skill Required : AWS S3 , Terraform</h5>
+                                </div>
+                                <div class="div3"><h3 class="heading"><a href="">
+                                    Serverless Web application</a></h3>
+                                    <h5>Serverless Project Plannining</h5>
+                                    <p>    1. Project Plannining : The goal of a serverless web application on AWS is to provide a scalable, cost-effective, and efficient solution for hosting and running web applications without the need to manage server infrastructure and for this project initialy I was ready for AWS IAM , AWS Lambda, Amazon API Gateway,Amazon DynamoDB , Amazon S3 , AWS CloudFormation , AWS CloudWatch.</p>
+
+                                    <p> 2.. Architecture Design: Design the overall architecture of your serverless application.
+                                        Determine which AWS services will be used for different components of the application.
+                                        Consider factors like scalability, security, and performance.</p>
+
+                                    <p>3. Environment Setup: Environement Setup means Setup an AWS Account and next Configure IAM (Identity and Access Management) roles with appropriate permissions.
+                                        and I Install any necessary development tools and SDKs.</p>   
+                                    
+                                    <p>4. Backend Development: 
+                                        Design and implement the backend logic of your application using serverless functions.
+                                        Write serverless functions using AWS Lambda, which will serve as the backend code for handling requests and business logic.
+                                        Set up API endpoints using Amazon API Gateway to trigger Lambda functions.</p>
+                                    
+                                    <p>
+                                        6. Data Management: Set up and configure databases services like Amazon DynamoDB and Amazon S3
+                                    
+                                    </p>   
+                                    
+                                    <p>
+                                        7. Authentication and Authorization:
+                                        Implement user authentication and authorization mechanisms to secure your application.
+                                        Use AWS Cognito or other authentication services to manage user identities and access control.
+                                    </p>    
+                                    <p>
+                                         8.Monitoring and Maintainance : Use AWS CloudWatch or other monitoring services to monitor metrics, set up alarms, and troubleshoot issues.
+                                    </p>
+                                    </p>
+                                        <h5 href="https://github.com/atharvapatil1210/own_cloud/blob/master/main.tf">Infrastructure as a code or Terraform</h5>
+                                        <h5>Skill Required : AWS S3 , Terraform</h5>
+                                    </div>
+                                    <div class="div4"><h3 class="heading"><a href="https://github.com/atharvapatil1210/kali_anonyms">wifi hack : Brute Force Attack , hashcat , rockyou wordlist</a></h3>
+                                        <p>Successfully Completed Advanced Brute Force Attack in Kali linux</p>
+                                            <h5 href="https://github.com/atharvapatil1210/kali_anonyms">In github account also contain cmd of some kali tools eg. wifi hack , bluetooth auth , wifi deauth , john-the-ripper , etc.</h5>
+                                            <h5>Skill Required : Kali linux</h5>
+                                        </div>
+                                        <div class="div5"><h3 class="heading"><a href="https://colab.research.google.com/drive/1p4GPgsghWyGuXso1_oobppA6c1sKkVuN?usp=sharing">
+                                            Bollywood Movie Recommendation System</a></h3>
+                                            <p>The Bollywood Movie Recommendation System is an intelligent application designed to provide personalized movie recommendations to users based on their preferences and viewing history. Leveraging the power of data analysis and machine learning techniques, this system analyzes user interactions with Bollywood movies to generate accurate and relevant recommendations, enhancing the user's movie-watching experience.</p>
+                                                <h5 href="https://colab.research.google.com/drive/1p4GPgsghWyGuXso1_oobppA6c1sKkVuN?usp=sharing"></h5>
+                                                <h5>Skill Required : Python-NumPy, Pandas</h5>
+                                            </div>
+                                            <div class="div6"><h3 class="heading"><a href="">
+                                                Own Private AI</a></h3>
+                                                <p>Building your own private AI on the command line interface (CLI) using Hugging Face Transformers can be a fascinating project. In this project, we'll create a simple chatbot that responds to user queries and engages in conversations. We'll use the chatbot pipeline from the Hugging Face Transformers library.</p>
+                                                    <h5 href="https://huggingface.co/meta-llama/Meta-Llama-3-8B"></h5>
+                                                    <h5>Skill Required : Basics of LLM</h5>
+                                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text mt-3 float-right d-block">
+
+
+                </div>
+    </section>
+
+    <section class="ftco-section" id="Fablab-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Fablab Projects</h1>
+                    <h2 class="mb-4">Fablab Projects</h2>
+    </section>
+
+    <section class="services" id="services">
+        
+        <div class="services-content">
+            <!-- Box 1 -->
+            <div class="services-box">
+                <i class='bx bx-code-alt' ></i>
+                <h3 href="webd.html">Web Development</h3>
+                <a href="webd.html">Learn More</a>
+            </div>
+            <!-- Box 2 -->
+            <div class="services-box">
+                <i class='bx bx-server' ></i>
+                <h3 href="design.html">3D-Design</h3>
+                <a href="design.html">Learn More</a>
+            </div>
+            <!-- Box 3 -->
+            <div class="services-box">
+                <i class='bx bx-brush' ></i>
+                <h3 href="laser.html">Laser Cutting</h3>
+                <a href="laser.html">Learn More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxl-wordpress' ></i>
+                <h3 href="3dprinting.html">3D Printing</h3>
+                <a href="3dprinting.html">Learn More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-wordpress' ></i>
+                <h3>IOT</h3>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section class="ftco-section" id="aws-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">AWS</h1>
+                    <h2 class="mb-4">AWS-Certification</h2>
+                    <div>
+
+                    </div>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="14e71317-9599-436c-8c1d-36b14fc85ae0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0b817879-1c9a-4cbe-b865-2f88e6f9673f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2586cb19-4bcc-4705-9dad-eee2345a3d29" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="36d87e7c-0dcb-4258-9eb0-1a565520e3c8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f3126fc7-df7b-4b65-9e28-2076cc9e9fbe" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    </section>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Contact</h1>
+                    <h2 class="mb-4">Contact Me</h2>
+                    <p>Below are the details to reach out to me!</p>
+                </div>
+            </div>
+
+            <div class="row d-flex contact-info mb-5">
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-map-signs"></span>
+                        </div>
+                        <h3 class="mb-4">Address</h3>
+                        <p>Akola , Maharashtra , India</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-phone2"></span>
+                        </div>
+                        <h3 class="mb-4">Contact Number</h3>
+                        <p><a href="tel://0101010101">+91 9637843011</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-paper-plane"></span>
+                        </div>
+                        <h3 class="mb-4">Email Address</h3>
+                        <p><a href="mailto:info@yoursite.com">atharvabodade@gmail.com
+				</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-globe"></span>
+                        </div>
+                        <h3 class="mb-4">Download Resume</h3>
+                        <p><a href="#">resumelink</a></p>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <br>
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 ftco-animate text-center">
+                            <h2>Have a<span> Question?  </span> <a href="https://forms.gle/2LePVugCbuPGzkTm7" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+                        </div>
+                    </div>
+                    <br>
+                    <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                        <li class="ftco-animate normal-txt">Find me on </li>
+                        <li class="ftco-animate"><a href="www.youtube.com/@atharvapatil1210"><span class="icon-youtube"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/atharvabodade12/"><span class="icon-linkedin"></span></a></li>
+                        <li class="ftco-animate"><a href="https://twitter.com/atharvabodade"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://facebook.com/atharvabodadepatil"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/atharvapatil_012?igsh=djQ5a2tmbHcwYjNs"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+
+                </div>
+            </div>
+        </div>
+        <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+
+            <footer style="background-color: #333; color: #fff; text-align: center; padding: 20px 0;">
+              <div style="max-width: 1200px; margin: 0 auto;">
+                <p style="margin: 0; font-size: 14px;">&copy; 2024 Atharva Bodade . All rights reserved.</p>
+              </div>
+            </footer>          
+    </footer>
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
